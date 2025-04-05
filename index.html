@@ -899,8 +899,7 @@
 
     // Update all elements with class "dynamic-path"
     const elements = document.getElementsByClassName("dynamic-path");
-    for (let i = 0; i < elements.length; i++) {
-      const element = elements[i];
+    for (const element of elements) {
       const currentPath = element.getAttribute("href") || element.getAttribute("src");
       if (currentPath && currentPath.startsWith("/firozalam.github.io")) {
         const newPath = currentPath.replace("/firozalam.github.io", BASE_URL);
